@@ -1,6 +1,11 @@
-git diff 
+git diff
+- compare file versions in working directory vs staging area
+
+git diff --staged
+- compare file versions in staging area vs repository latest commit
+
+git diff commit_id1 commit_id2
 - compare two versions of all files contained in two commits
-- git diff commit_id1 commit_id2
 
 git log
 - gives information about what changed in each commit (commit id,
@@ -33,3 +38,22 @@ git add
 
 git reset
 - remove selected files from staging area
+
+git checkout [branch-name]
+- Switches to the specified branch and updates the working directory
+- e.g. git checkout master
+
+tip of a branch
+- last commit to the branch
+
+merging
+- process of combining two branches
+
+git branch
+- get list of branches in the repository
+- the branch marked with an asterisk is the current branch (where updates will be made)
+
+git branch [branch-name]
+- create new branch
+
+
