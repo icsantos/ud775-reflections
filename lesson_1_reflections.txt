@@ -1,0 +1,46 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+    The diff utility helped me to quickly track down which lines have changed.  
+    This is very useful when the files being compared have hundreds of lines.
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+    If you need to make similar changes, you can look through the history of the
+    file to see how it was done before and be less likely to miss a necessary
+    step.  It's also easy to revert the file to a previous stable version.
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+    Pros: You can commit when you get to a logical stopping point
+          You can have a stable version to revert to if the changes are not working out
+    Cons: That stopping point may involve a lot of changes in the code
+          You can clutter up the history if you commit too often
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+    Version control systems like Git saves files that are edited with external
+    editors, so you can change multiple files and commit them together.  Systems
+    like Google Docs use their internal editor, so you can edit only one file at
+    a time and cannot specify associations between files.
+
+How can you use the commands git log and git diff to view the history of files?
+
+    Use git log to see the history of changes in the repository, including the
+    commit ID, author, date, description of changes made.  Use git diff to see
+    what changed between two versions of files in two commits.
+
+How might using version control make you more confident to make changes that
+could break something?
+
+    Using version control makes it easier to experiment and make changes because
+    you can always revert to a previous stable version of the repository.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+    To version control the files for xmoppet.org because I'll be converting them
+    to use HTML5 and CSS3, and possibly also JavaScript, jQuery and JSON.
