@@ -21,3 +21,16 @@ What are some situations when branches would be helpful in keeping your history 
   - will isolate different sets of changes
   - will leave you with a stable version that is untouched
   - will allow multiple developers to work on the repository
+  
+How do the diagrams help you visualize the branch structure?
+
+  Diagrams graphically show you where commits where branched off, and the parents of each commit
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+  Merging two branches together results in the changes in both branches being integrated into one branch.  We represent the merge in the diagram the way we do to graphically show where the merge occurred, because we delete the name of one of the branches.
+  
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+  Automatic merging is convenient when there are a lot of changes between branches, leaving you to do manual merges only when there are conflicts.  However, bugs may get introduced if the changes don't play nice when merged together.
+

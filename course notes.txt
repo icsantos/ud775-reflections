@@ -7,6 +7,9 @@ git diff --staged
 git diff commit_id1 commit_id2
 - compare two versions of all files contained in two commits
 
+git show commit_id
+- compare version in commit_id against its parent
+
 git log
 - gives information about what changed in each commit (commit id,
   author, date, notes, list of files changed in the commit, number
@@ -42,6 +45,7 @@ git reset
 git checkout [branch-name]
 - Switches to the specified branch and updates the working directory
 - e.g. git checkout master
+- e.g. git checkout coins (where coins is a remote branch)
 
 tip of a branch
 - last commit to the branch
@@ -56,4 +60,49 @@ git branch
 git branch [branch-name]
 - create new branch
 
+git log --graph --oneline [master] [coins]
 
+each commit knows its parent
+
+git checkout -b new_branch_name
+- shortcut for these two commands:
+  git branch new_branch_name
+  git checkout new_branch_name
+  
+If a branch is deleted and leaves some commits unreachable from existing branches, those commits will continue to be accessible by commit id, until Git’s garbage collection runs. This will happen automatically from time to time, unless you actively turn it off. You can also run this process manually with git gc.
+
+merging coins into master then removing coins branch
+  git checkout master
+  git merge coins
+  git branch -d coins
+
+  
+merge master to easy-mode
+  diagram using http://yuml.me/diagram/activity/draw
+    (ships on coins)->(master),(color)->(master),(color)->(easy),(master)->(easy)
+  git checkout easy-mode
+  git merge master easy-mode
+  resolve conflicts in game.js
+  git status
+        You have unmerged paths.
+          (fix conflicts and run "git commit")
+
+        Unmerged paths:
+          (use "git add <file>..." to mark resolution)
+
+                both modified:   game.js  
+  git add game.js
+  git status
+        All conflicts fixed but you are still merging.
+          (use "git commit" to conclude merge)
+
+        Changes to be committed:
+
+               modified:   game.js            
+  
+  git commit
+  git log
+  git log -n 1 (to show only the specified number of commits)
+  
+  
+  
