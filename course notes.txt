@@ -105,4 +105,15 @@ merge master to easy-mode
   git log -n 1 (to show only the specified number of commits)
   
   
-  
+git remote add origin https://github.com/icsantos/ud775-reflections.git
+git push -u origin master
+
+    Counting objects: 17, done.
+    Delta compression using up to 4 threads.
+    Compressing objects: 100% (17/17), done.
+    Writing objects: 100% (17/17), 4.55 KiB | 0 bytes/s, done.
+    Total 17 (delta 8), reused 0 (delta 0)
+    To https://github.com/icsantos/ud775-reflections.git
+     * [new branch]      master -> master
+    Branch master set up to track remote branch master from origin.
+
