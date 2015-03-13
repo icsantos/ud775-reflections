@@ -117,3 +117,4 @@ git push -u origin master
      * [new branch]      master -> master
     Branch master set up to track remote branch master from origin.
 
+git pull origin master
