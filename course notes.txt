@@ -196,3 +196,51 @@ Resolving conflicts in a Pull Request / Updating your local repository
 Reflect: When to use a separate branch
 
 You just saw that the workflow when making changes in a separate branch is more complicated than working directly in master, especially when you need to stay up-to-date with changes others are making. Rather than simply pulling and pushing, you need to pull changes into your local master branch, merge the local master into your branch (different-oil, in our case), then push your branch to the remote before finally merging your branch into master, either locally or on GitHub.
+
+
+Modifying the Adventure Repository
+  https://github.com/udacity/create-your-own-adventure
+  Click on Fork
+  D:\GitHub\udacity\ud775>
+  git clone https://github.com/icsantos/create-your-own-adventure.git
+  cd .\create-your-own-adventure
+  git branch english-calldoctor
+  git checkout english-calldoctor
+  Modify english/call-a-doctor/doctor.md
+  Create english/call-a-doctor/timelord/timelord.md
+  git add english/call-a-doctor/doctor.md
+  git add english/call-a-doctor/timelord/
+  git commit
+  git push origin english-calldoctor
+  
+  In GitHub:
+    Go to icsantos\create-your-own-adventure
+    Click branch dropdown, select english-calldoctor
+    Click Pull Request
+    Click base fork dropdown, select icsantos\recipes
+    Click Create Pull Request
+
+
+Updating a Cross-Repository Pull Request (if another commit conflicts with yours)
+  Add the original repository as a remote in your clone
+    git remote add upstream https://github.com/udacity/create-your-own-adventure.git
+  Pull the master branch from the original repository
+    git checkout master
+  Merge the master branch into your change branch
+    git pull upstream master
+  Push your change branch to your fork
+    git checkout english-calldoctor
+    git merge master english-calldoctor
+    Resolve the conflict
+    git add doctor.md
+    git commit
+    git push origin english-calldoctor
+  Update the master
+    git checkout master
+    git push
+    
+    
+    
+  
+    
+  
