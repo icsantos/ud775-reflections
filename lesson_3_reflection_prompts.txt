@@ -24,3 +24,7 @@ How would you collaborate without using Git or GitHub? What would be easier, and
   * You can email your edited files to your collaborators (someone will have to manually merge the changes).
   * You can have a conference call with your collaborators, with one person editing the file while sharing their screen.
 
+When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+
+  Create a branch when you want to make significant changes to your project, e.g., to add experimental features, globalization, a new consumer.  There could be different teams working on each branch.
+
