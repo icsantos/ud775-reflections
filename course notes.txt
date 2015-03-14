@@ -118,3 +118,16 @@ git push -u origin master
     Branch master set up to track remote branch master from origin.
 
 git pull origin master
+
+clone vs fork
+- forking is like making a clone but entirely within GitHub, from one user's GitHub repository into another user's GitHub account
+- cloning is making a local copy of a repository either remotely from GitHub or locally into another folder in your computer
+
+Adding a file to a repository cloned from a fork
+-- Before you ran git push, your change should have only existed locally via git log. Commits will not automatically be shared to remotes - you have to manually push your branch if you want to share changes.
+-- After you ran git push, your change should have existed locally and on your fork. It should not have existed on Larry's repository, which is the repository you forked. The reason you forked in the first place is because you don't have permission to change Larry's repository!
+
+
+oooh!  nice visualization via git gui
+
+

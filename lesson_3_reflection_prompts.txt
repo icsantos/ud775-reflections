@@ -2,3 +2,14 @@ When would you want to use a remote repository rather than keeping all your work
 
   Use a remote repository to make the files in them available for reading and/or editing by others.
 
+Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+
+  You don't want Git to update the file that you're actively editing.
+
+Describe the differences between forks, clones, and branches. When would you use one instead of another?
+
+  When you want to make changes to a repository that you don't have permission to edit (you're not designated a collaborator), fork the repository to your own GitHub.  Clone to your local drive, so you can then edit the files locally.  Use git push to update the remote (the one in your GitHub account; the GitHub from which you forked does not get updated).
+  
+  When you have permission to edit a repository, you can clone it instead of forking it.
+  
+  Create a branch when you want to make significant changes to your project, e.g., to add experimental features or to add globalization.
