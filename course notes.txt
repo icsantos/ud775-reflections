@@ -143,6 +143,7 @@ Fast-forward Merges
 
 Making a Pull Request
 - request a collaborator to pull your branch into the collaborator's master branch
+- part of GitHub
 
   git branch different-oil
   git checkout different-oil
@@ -158,8 +159,40 @@ Making a Pull Request
     Click base fork dropdown, select icsantos\recipes
     Click Create Pull Request
     
-    
-    
-    
+
+Resolving conflicts in a Pull Request / Updating your local repository
+  git log (to verify that collaborator's changes are not in the local master)
+  git checkout master   
+  git pull origin master
+  git checkout different-oil
+  git merge master different-oil
+  Resolve conflicts
+  git add cake-recipe.txt
+  git commit
+  git log (should now show changes from you and from collaborator)
+  git push origin different-oil
+  On GitHub:
+    Click on "Merge pull request" button
+    Click on "Confirm merge" button
+  git pull origin master
+  git log -n 1
+    Merge: 4b6c3af 4802ea5
+    Author: Imelda Santos <isantos1206@gmail.com>
+    Date:   Sat Mar 14 01:23:05 2015 -0500
+
+        Merge pull request #1 from icsantos/different-oil
+
+        Use canola oil instead of vegetable oil  
+
+  The commit message:  
+  * Indicates that a pull request was merged
+  * Gives the number of the pull request (#1)
+  * Gives the branch the pull request was merged from (icsantos/different-oil).
+  * Contains the title of the pull request.
   
-  
+  GitHub automatically creates a commit message like this whenever a pull request is merged to make it easy to see pull requests in the commit history. Even when the merge is a fast-forward merge, GitHub still creates this commit.
+
+
+Reflect: When to use a separate branch
+
+You just saw that the workflow when making changes in a separate branch is more complicated than working directly in master, especially when you need to stay up-to-date with changes others are making. Rather than simply pulling and pushing, you need to pull changes into your local master branch, merge the local master into your branch (different-oil, in our case), then push your branch to the remote before finally merging your branch into master, either locally or on GitHub.
