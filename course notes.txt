@@ -118,6 +118,13 @@ git push -u origin master
     Branch master set up to track remote branch master from origin.
 
 git pull origin master
+- shortcut for these two commands:
+  git fetch origin
+  git merge master origin/master
+
+git fetch origin
+- will clone(?) the commits from the remote to the local starting from the last common commit
+  
 
 clone vs fork
 - forking is like making a clone but entirely within GitHub, from one user's GitHub repository into another user's GitHub account
@@ -131,3 +138,28 @@ Adding a file to a repository cloned from a fork
 oooh!  nice visualization via git gui
 
 
+Fast-forward Merges
+- you merge two commits where one is the ancestor of the other (one commit is reachable by the other)
+
+Making a Pull Request
+- request a collaborator to pull your branch into the collaborator's master branch
+
+  git branch different-oil
+  git checkout different-oil
+    edit cake-recipe.txt (change 'vegetable oil' to 'canola oil')
+  git add cake-recipe.txt
+  git commit
+  git push origin different-oil
+  
+  In GitHub:
+    Go to icsantos\recipes
+    Click branch dropdown, select different-oil
+    Click Pull Request
+    Click base fork dropdown, select icsantos\recipes
+    Click Create Pull Request
+    
+    
+    
+    
+  
+  
