@@ -217,7 +217,7 @@ Modifying the Adventure Repository
     Go to icsantos\create-your-own-adventure
     Click branch dropdown, select english-calldoctor
     Click Pull Request
-    Click base fork dropdown, select icsantos\recipes
+    Click base fork dropdown, select master of udacity/create-your-own-adventure
     Click Create Pull Request
 
 
